@@ -238,57 +238,107 @@
     <div class="row ww-rsvp-form">
       <div class="col-md-10">
         <div class="card-body">
-          <form action="https://formspree.io/example@email.com" method="POST">
-            <div class="row">
-              <div class="col md-6 pb-3">
-                <div class="form-group">
-                  <label for="name-input">Your Name*</label>
-                  <input class="form-control" id="name-input" type="text" name="name" required="required"/>
-                </div>
-              </div>
-              <div class="col-md-6 pb-3">
-                <div class="form-group">
-                  <label for="email-input">Your Email*</label>
-                  <input class="form-control" id="email-input" type="email" name="_replyto" required="required"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col md-6 pb-3">
-                <div class="form-group">
-                  <label for="guest-input">Number of Guests</label>
-                  <select class="form-control" id="guest-input" name="guest">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6 pb-3">
-                <div class="form-group">
-                  <label for="events-input">I am Attending</label>
-                  <select class="form-control" id="events-input" name="events">
-                    <option value="all-event">All Events</option>
-                    <option value="wedding-ceremony">Wedding ceremony</option>
-                    <option value="reception-party">Reception Party</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="form-group">
-                  <label for="message-input">Your Message</label>
-                  <textarea class="form-control" id="message-input" name="message" rows="4"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col text-center">
-                <button class="btn btn-primary btn-submit" type="submit">Send</button>
-              </div>
-            </div>
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSdNGC1ERq7d98J9gVFrv3cvESghL6Au4HKzapEqEpZB2jzkkw/formResponse"
+                target="_self"
+                id="bootstrapForm"
+                method="POST">
+              <fieldset>
+                  <h2>Wedding RSVP<br><small></small></h2>
+              </fieldset>
+
+
+              <!-- Field type: "short" id: "1687649604" -->
+              <fieldset>
+                  <legend for="1687649604">Name(s)</legend>
+                  <div class="form-group">
+                      <input id="124716953" type="text" name="entry.124716953" class="form-control" >
+                  </div>
+              </fieldset>
+
+
+              <!-- Field type: "short" id: "323519284" -->
+              <fieldset>
+                  <legend for="323519284">Email</legend>
+                  <div class="form-group">
+                      <input id="1300991795" type="email" name="entry.1300991795" class="form-control" >
+                  </div>
+              </fieldset>
+
+
+              <!-- Field type: "dropdown" id: "1756906686" -->
+              <fieldset>
+                  <legend for="1756906686">Number of Guests</legend>
+                  <div class="form-group">
+                      <select id="1756906686" name="entry.1316558397" class="form-control">
+                          <option value=""></option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                      </select>
+                  </div>
+              </fieldset>
+
+
+              <!-- Field type: "dropdown" id: "1331473849" -->
+              <fieldset>
+                  <legend for="1331473849">Use of Shuttle Bus</legend>
+                  <div class="form-group">
+                      <select id="1331473849" name="entry.1706945791" class="form-control">
+                          <option value=""></option>
+                          <option value="I&#x27;ll be using the bus.">I&#x27;ll be using the bus.</option>
+                          <option value="I won&#x27;t be using the bus.">I won&#x27;t be using the bus.</option>
+                          <option value="I&#x27;m not sure if I&#x27;ll be using the bus.">I&#x27;m not sure if I&#x27;ll be using the bus.</option>
+                      </select>
+                  </div>
+              </fieldset>
+
+
+              <!-- Field type: "choices" id: "1084118846" -->
+              <fieldset>
+                  <legend for="1084118846">Food Requirements</legend>
+                  <div class="form-group">
+                      <div class="radio">
+                          <label>
+                              <input type="radio" name="entry.873816064" value="Vegetarian" >
+                              Vegetarian
+                          </label>
+                      </div>
+                      <div class="radio">
+                          <label>
+                              <input type="radio" name="entry.873816064" value="Vegan" >
+                              Vegan
+                          </label>
+                      </div>
+                      <div class="radio">
+                          <label>
+                              <input type="radio" name="entry.873816064" value="__other_option__" >
+                          </label>
+                          <input type="text" name="entry.873816064.other_option_response" placeholder="other...">
+                      </div>
+                  </div>
+              </fieldset>
+
+
+              <!-- Field type: "paragraph" id: "585581750" -->
+              <fieldset>
+                  <legend for="585581750">Message</legend>
+                  <div class="form-group">
+                      <textarea id="1159427254" name="entry.1159427254" class="form-control" ></textarea>
+                  </div>
+              </fieldset>
+
+              <input type="hidden" name="fvv" value="1">
+              <input type="hidden" name="fbzx" value="-5557934590174763250">
+              <!--
+                  CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+                  This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+                  Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+                  We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+              -->
+              <input type="hidden" name="pageHistory" value="0">
+
+              <input class="btn btn-primary" type="submit" value="Submit">
           </form>
         </div>
       </div>
