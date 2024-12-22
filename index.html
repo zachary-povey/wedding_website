@@ -245,29 +245,41 @@
               <fieldset>
                   <h2>Wedding RSVP<br><small></small></h2>
               </fieldset>
-
-
+          
+          
               <!-- Field type: "short" id: "1687649604" -->
               <fieldset>
-                  <legend for="1687649604">Name(s)</legend>
+                  <legend for="1687649604">Name(s)*</legend>
                   <div class="form-group">
-                      <input id="124716953" type="text" name="entry.124716953" class="form-control" >
+                      <input id="124716953" type="text" name="entry.124716953" class="form-control" required>
                   </div>
               </fieldset>
-
-
+          
+          
               <!-- Field type: "short" id: "323519284" -->
               <fieldset>
-                  <legend for="323519284">Email</legend>
+                  <legend for="323519284">Email*</legend>
                   <div class="form-group">
-                      <input id="1300991795" type="email" name="entry.1300991795" class="form-control" >
+                      <input id="1300991795" type="text" name="entry.1300991795" class="form-control" required>
                   </div>
               </fieldset>
-
-
+          
+          
+              <!-- Field type: "dropdown" id: "250036444" -->
+              <fieldset>
+                  <legend for="250036444">Attendance*</legend>
+                  <div class="form-group">
+                      <select id="250036444" name="entry.1736737985" class="form-control">
+                          <option value="I will be attending.">I will be attending.</option>
+                          <option value="I will not be attending.">I will not be attending.</option>
+                      </select>
+                  </div>
+              </fieldset>
+          
+          
               <!-- Field type: "dropdown" id: "1756906686" -->
               <fieldset>
-                  <legend for="1756906686">Number of Guests</legend>
+                  <legend for="1756906686">Number of Guests Attending</legend>
                   <div class="form-group">
                       <select id="1756906686" name="entry.1316558397" class="form-control">
                           <option value=""></option>
@@ -278,8 +290,8 @@
                       </select>
                   </div>
               </fieldset>
-
-
+          
+          
               <!-- Field type: "dropdown" id: "1331473849" -->
               <fieldset>
                   <legend for="1331473849">Use of Shuttle Bus</legend>
@@ -292,8 +304,8 @@
                       </select>
                   </div>
               </fieldset>
-
-
+          
+          
               <!-- Field type: "choices" id: "1084118846" -->
               <fieldset>
                   <legend for="1084118846">Food Requirements</legend>
@@ -314,12 +326,12 @@
                           <label>
                               <input type="radio" name="entry.873816064" value="__other_option__" >
                           </label>
-                          <input type="text" name="entry.873816064.other_option_response" placeholder="other...">
+                          <input type="text" name="entry.873816064.other_option_response" placeholder="custom value">
                       </div>
                   </div>
               </fieldset>
-
-
+          
+          
               <!-- Field type: "paragraph" id: "585581750" -->
               <fieldset>
                   <legend for="585581750">Message</legend>
@@ -327,9 +339,9 @@
                       <textarea id="1159427254" name="entry.1159427254" class="form-control" ></textarea>
                   </div>
               </fieldset>
-
+          
               <input type="hidden" name="fvv" value="1">
-              <input type="hidden" name="fbzx" value="-5557934590174763250">
+              <input type="hidden" name="fbzx" value="5902596697437612317">
               <!--
                   CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
                   This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
@@ -337,7 +349,7 @@
                   We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
               -->
               <input type="hidden" name="pageHistory" value="0">
-
+          
               <input class="btn btn-primary" type="submit" value="Submit">
           </form>
         </div>
